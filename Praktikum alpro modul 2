@@ -1,0 +1,35 @@
+#include <stdio.h>
+
+int main()
+{
+    int angka, integerbalik = 0, integerasli, sisa;
+    printf("TUGAS PRAKTIKUM ALGORITMA MODUL 2\n");
+    printf("BIANCA GITHA 2008561087 KELAS E\n");
+    printf("\n");
+    printf("PROGRAM PEMERIKSA BILANGAN PALINDROM\n");
+    printf("===============================================================\n");
+
+    printf("INPUT BILANGAN YANG AKAN DICEK : ");
+    scanf("%i",&angka);
+    integerasli=angka;
+    printf("\n");
+
+    while(angka!=0)
+    {
+        sisa=angka%10;
+        integerbalik = integerbalik*10 + sisa;
+        angka /= 10;
+    }
+
+    if (integerasli==integerbalik)
+    {
+        printf("Terima kasih telah menginput, %i adalah bilangan palindrom\n", integerasli);
+    }
+    else
+    {
+        printf("Terima kasih telah menginput, %i bukan bilangan palindrom\n", integerasli);
+    }
+
+    printf("===============================================================\n");
+    return 0;
+}
