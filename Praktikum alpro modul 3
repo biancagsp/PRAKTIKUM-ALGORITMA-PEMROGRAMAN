@@ -1,0 +1,83 @@
+#include <stdio.h>
+void main()
+{
+    int stack[1000],atas=-1,input, i;
+    char barang[1000],barang_atas=0, c;
+    do
+    {
+        printf("BIANCA GITHA (2008561087)\n");
+        printf("TUGAS PRAKTIKUM ALGORITMA PEMROGRAMAN ARRAY\n");
+        printf("===============================================\n");
+        printf("INPUT MENU DIBAWAH INI : \n");
+        printf("1. PUSH\n");
+        printf("2. POP\n");
+        printf("3. VIEW\n");
+        printf("4. EXIT\n");
+        printf("INPUT : ");
+        scanf("%d", &input);
+
+        switch(input)
+        {
+        case 1:
+            //push
+            if (atas > 1000)
+            {
+                printf("Maaf stack penuh\n");
+            }
+            else
+            {
+                int input_push;
+                printf("1. Nomor\n2. Barang\n");
+                printf("PILIH : ");
+                scanf("%d", &input_push);
+                if(input_push = 1)
+                {
+                    printf("Masukkan data nomor : ");
+                    scanf("%d", &stack[atas+1]);
+                    atas++;
+                    printf("\n");
+                    printf("===============================================\n");
+                }
+                else
+                {
+                    printf("Masukkan data barang : ");
+                    scanf("%s", &barang[barang_atas+1]);
+                    memcpy(t[idx].date,tanggalinput,sizeof(t[idx].date));
+                    barang_atas++;
+                    printf("\n");
+                    printf("===============================================\n");
+                }
+
+            }
+            break;
+
+        case 2:
+            //pop
+            if (atas < 0)
+                printf("Maaf stack kosong\n");
+            else
+            {
+                printf("Data keluar : %d\n", stack[atas]);
+                atas--;
+                printf("\n");
+                printf("===============================================\n");
+            }
+            break;
+
+        case 3:
+            //view
+            for(i=atas; i>=0; i--)
+                printf("%d ", stack[i]);
+            printf("\n");
+            printf("\n");
+            printf("===============================================\n");
+            break;
+
+        case 4:
+            printf("TERIMA KASIH TELAH MENGGUNAKAN PROGRAM INI\n");
+            break;
+        }
+    }
+    while(input!=4);
+    return 0;
+}
