@@ -1,0 +1,42 @@
+#include <ctype.h>
+#include <stdio.h>
+#include <string.h>
+
+int main()
+{
+    int pilih;
+    char kata[100] = {'\0'};
+    char temp[100] = {'\0'};
+    int b,g,s = 0;
+    printf("========================================================================\n");
+    printf("Nama : Bianca Githa (2008561087)\n");
+    printf("PROGRAM PENGECEK KATA ATAU KALIMAT PALINDROM\n");
+    printf("========================================================================\n");
+    printf("\nSILAHKAN DIINPUT : ");
+    gets(kata);
+    b = strlen(kata);
+
+    for(g = 0; kata[g]; g++)
+    {
+        kata[g] = tolower(kata[g]);
+    }
+
+    for(g = b-1; g >= 0; g--)
+    {
+        temp[s] = kata[g];
+        s++;
+    }
+
+    printf("HASIL : ");
+    if(strcmp(kata, temp) == 0)
+    {
+        printf("PALINDROM");
+    }
+    else
+    {
+        printf("TIDAK PALINDROM");
+    }
+    getch();
+    return 0;
+}
+
